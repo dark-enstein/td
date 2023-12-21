@@ -1,0 +1,19 @@
+title: "Docker Image Builder"
+wrangler: "sophia"
+stock: "containers/app"
+#flags:
+#    - "ignore-failures"
+rodeos:
+  - rodeo:
+      - ranch:
+          name: "Check Docker Status"
+          cmd: [ "docker", "info" ]
+      - ranch:
+          name: "Build Docker Image"
+          cmd: [ "docker", "build", "-t", "app-image:latest", "." ]
+      - ranch:
+          name: "Push to Registry"
+          cmd: [ "docker", "push", "username/app-image:latest" ]
+      - ranch:
+          name: "Cleanup Unused Images"
+          cmd: [ "docker", "system", "prune", "-f" ]
