@@ -1,0 +1,22 @@
+title: "Basic Web App Deployment"
+wrangler: "jessica"
+stock: "webapp/frontend"
+#flags:
+#    - "verbose-logging"
+rodeos:
+  - rodeo:
+      - ranch:
+          name: "Fetch Latest Code"
+          cmd: [ "git", "pull", "origin", "master" ]
+      - ranch:
+          name: "Install Dependencies"
+          cmd: [ "npm", "install" ]
+      - ranch:
+          name: "Run Tests"
+          cmd: [ "npm", "test" ]
+      - ranch:
+          name: "Build Project"
+          cmd: [ "npm", "run", "build" ]
+      - ranch:
+          name: "Deploy"
+          cmd: [ "scp", "-r", "build/", "user@server:/path/to/deployment" ]
