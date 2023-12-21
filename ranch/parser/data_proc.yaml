@@ -1,0 +1,19 @@
+title: "Data Processing Pipeline"
+wrangler: "mohamed"
+stock: "data_processor/scripts"
+#flags:
+#    - "no-cache"
+rodeos:
+  - rodeo:
+      - ranch:
+          name: "Download Data"
+          cmd: [ "wget", "http://data.example.com/dataset.zip" ]
+      - ranch:
+          name: "Unzip Dataset"
+          cmd: [ "unzip", "dataset.zip" ]
+      - ranch:
+          name: "Run Analysis Script"
+          cmd: [ "python", "analyze.py" ]
+      - ranch:
+          name: "Cleanup Temp Files"
+          cmd: [ "rm", "dataset.zip" ]
