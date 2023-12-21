@@ -1,0 +1,19 @@
+title: "Database Backup System"
+wrangler: "ali"
+stock: "db/backup"
+#flags:
+#    - "dry-run"
+rodeos:
+  - rodeo:
+      - ranch:
+          name: "Check Disk Space"
+          cmd: [ "df", "-h" ]
+      - ranch:
+          name: "Backup Database"
+          cmd: [ "mysqldump", "-u", "user", "-p", "database", ">", "backup.sql" ]
+      - ranch:
+          name: "Compress Backup"
+          cmd: [ "gzip", "backup.sql" ]
+      - ranch:
+          name: "Copy to Remote Storage"
+          cmd: [ "scp", "backup.sql.gz", "user@backupserver:/path/to/backups" ]
