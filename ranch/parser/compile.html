@@ -1,0 +1,19 @@
+title: "Front-end Asset Compilation"
+wrangler: "carlos"
+stock: "frontend/assets"
+#flags:
+#    - "minify-assets"
+rodeos:
+  - rodeo:
+      - ranch:
+          name: "Clean Old Builds"
+          cmd: [ "rm", "-rf", "dist/" ]
+      - ranch:
+          name: "Compile SCSS to CSS"
+          cmd: [ "sass", "styles.scss:styles.css" ]
+      - ranch:
+          name: "Minify JavaScript"
+          cmd: [ "uglifyjs", "app.js", "-o", "app.min.js" ]
+      - ranch:
+          name: "Copy Assets to Dist"
+          cmd: [ "cp", "-R", "images/", "dist/images/" ]
