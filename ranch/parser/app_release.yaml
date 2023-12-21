@@ -1,0 +1,19 @@
+title: "Mobile App Release"
+wrangler: "david"
+stock: "mobileapp/android"
+#flags:
+#    - "fast-track"
+rodeos:
+  - rodeo:
+      - ranch:
+          name: "Sync Repo"
+          cmd: [ "git", "fetch", "--all" ]
+      - ranch:
+          name: "Install Android SDK"
+          cmd: [ "sdkmanager", "'build-tools;29.0.2'", "'platforms;android-29'" ]
+      - ranch:
+          name: "Compile App"
+          cmd: [ "./gradlew", "assembleRelease" ]
+      - ranch:
+          name: "Upload to Play Store"
+          cmd: [ "fastlane", "supply", "--apk", "app/build/outputs/apk/release/app-release.apk" ]
