@@ -1,0 +1,16 @@
+title: "Automated Documentation Generation"
+wrangler: "ivan"
+stock: "docs/source"
+#flags:
+#    - "update-gh-pages"
+rodeos:
+  - rodeo:
+      - ranch:
+          name: "Install Documentation Tools"
+          cmd: [ "pip", "install", "sphinx" ]
+      - ranch:
+          name: "Generate HTML Docs"
+          cmd: [ "sphinx-build", "-b", "html", "source/", "build/html" ]
+      - ranch:
+          name: "Copy to Documentation Directory"
+          cmd: [ "cp", "-R", "build/html/*", "../docs/" ]
