@@ -1,0 +1,6 @@
+environment: "staging"
+preferredName: "StageShed"
+log:
+  level: "error"
+  bufferTimeout: 45
+  flushRetries: 1
