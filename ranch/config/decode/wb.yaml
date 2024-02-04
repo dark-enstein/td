@@ -1,0 +1,13 @@
+title: "Summer Roundup"
+wrangler: "Jane Smith"
+stock: "Sheep"
+flags:
+  - "standard"
+rodeos:
+  - rodeo:
+      - ranch:
+          name: "Sunny Fields"
+          cmd:
+            - "herd"
+            - "mark"
+          package: "advanced"
