@@ -1,0 +1,6 @@
+environment: "testing"
+preferredName: "TestShed"
+log:
+  level: "warn"
+  bufferTimeout: 15
+  flushRetries: 2
