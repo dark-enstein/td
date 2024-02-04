@@ -1,0 +1,6 @@
+environment: "production"
+preferredName: "ProdShed"
+log:
+  level: "info"
+  bufferTimeout: 60
+  flushRetries: 3
