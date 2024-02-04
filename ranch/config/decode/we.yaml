@@ -1,0 +1,14 @@
+title: "Annual Checkup"
+wrangler: "Morgan Kim"
+stock: "Mixed"
+flags:
+  - "routine"
+  - "comprehensive"
+rodeos:
+  - rodeo:
+      - ranch:
+          name: "All-Seasons Acres"
+          cmd:
+            - "inspect"
+            - "vaccinate"
+          package: "extended"
