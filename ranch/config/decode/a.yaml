@@ -1,0 +1,6 @@
+environment: "development"
+preferredName: "DevShed"
+log:
+  level: "debug"
+  bufferTimeout: 30
+  flushRetries: 5
