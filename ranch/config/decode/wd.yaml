@@ -1,0 +1,14 @@
+title: "Winter Preparation"
+wrangler: "Casey Lee"
+stock: "Goats"
+flags:
+  - "urgent"
+  - "resource-intensive"
+rodeos:
+  - rodeo:
+      - ranch:
+          name: "Frosty Farm"
+          cmd:
+            - "shelter"
+            - "inventory"
+          package: "basic"
