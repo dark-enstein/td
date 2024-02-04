@@ -1,0 +1,14 @@
+title: "Spring Gathering"
+wrangler: "John Doe"
+stock: "Cattle"
+flags:
+  - "urgent"
+  - "high-priority"
+rodeos:
+  - rodeo:
+      - ranch:
+          name: "Green Pastures"
+          cmd:
+            - "gather"
+            - "sort"
+          package: "basic"
