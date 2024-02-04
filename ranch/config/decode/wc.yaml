@@ -1,0 +1,14 @@
+title: "Fall Harvest"
+wrangler: "Alex Johnson"
+stock: "Horses"
+flags:
+  - "low-priority"
+  - "maintenance"
+rodeos:
+  - rodeo:
+      - ranch:
+          name: "Autumn Ranch"
+          cmd:
+            - "train"
+            - "feed"
+          package: "premium"
